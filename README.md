@@ -1,5 +1,5 @@
 # miniproject
 YouTube Transcript Summarizer
-This is a web-based application that summarizes YouTube video transcripts 
-when user gives the URL to provide concise summaries 
-of video content using youtube_transcript_api.
+A web-based application to summarize YouTube video transcripts. 
+Users can input a YouTube URL to get concise summaries of video content with clickable timestamps for easy navigation.
+Also allows downloading summaries as a Word document.
