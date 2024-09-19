@@ -1,3 +1,4 @@
+numpy<2
 Flask==2.2.5
 Werkzeug==2.2.3
 flask-cors==3.0.10
@@ -5,3 +6,4 @@ transformers==4.30.2
 torch==2.0.1
 youtube-transcript-api==0.6.0
 python-docx==0.8.11
+pybind11>=2.12
