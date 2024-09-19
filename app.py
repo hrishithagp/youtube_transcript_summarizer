@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 from flask_cors import CORS
 from transformers import pipeline
 from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptAvailable
@@ -10,6 +10,11 @@ CORS(app)
 model_name = "sshleifer/distilbart-cnn-12-6"
 model_revision = "a4f8f3e"
 summarizer = pipeline('summarization', model=model_name, revision=model_revision)
+
+# Serve HTML page
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/summarize', methods=['POST', 'OPTIONS'])
 def summarize():
